@@ -35,7 +35,7 @@
             width: 300px;
             background: #fff;
             padding: 20px;
-            height: auto;
+            height: 400px; /* Fixed height for consistency */
             text-align: center;
             border-radius: 15px;
             display: flex;
@@ -85,6 +85,7 @@
             margin-bottom: 20px;
             position: relative;
             padding: 0 15px;
+            overflow: hidden; /* Ensure text does not overflow */
         }
         .testi h4 {
             font-size: 20px;
@@ -247,10 +248,7 @@ function addCarouselItem(photo, name, message, rating) {
     highlightCentralItem();
 }
 
-let testimonials = [
-    { photo: 'https://i.ibb.co/d6JyF6t/a-6-removebg-preview.png', name: 'John Doe', message: 'Great service!', rating: 5 },
-    { photo: 'https://i.ibb.co/d6JyF6t/a-6-removebg-preview.png', name: 'Jane Doe', message: 'Loved it!', rating: 4 }
-];
+let testimonials = [];
 
 function submitForm() {
     var photoFile = document.getElementById('photoUpload').files[0];
@@ -307,7 +305,6 @@ function prevSlide() {
     $('#carouselInner').prepend(items.eq(items.length - 1)); // Move the last item to the beginning
     highlightCentralItem();
 }
-
     </script>
 </body>
 </html>
